@@ -20,13 +20,12 @@
 
 /* NAVIGATION */
 .navigation {
-  border: 1px solid red;
-  width: 95%;
-  margin: 0 auto;
+  background-color: var(--background-color-nav);
 }
 
 .navigation-wrapper {
-  background-color: var(--background-color-nav);
+  width: 95%;
+  margin: 0 auto;
 }
 
 .navigation-list {
@@ -73,22 +72,25 @@
     margin-right: 10px;
   }
   .navigation {
+    background-color: var(--background-color-nav);
+  }
+
+  .navigation-wrapper {
     width: 70%;
-    border: 2px solid red;
     margin: 0 auto;
   }
 }
 
 /* HERO */
-.hero-wrapper {
+.hero {
   background-image: url("./hero-picture/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
   background-color: var(--background-color-hero);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+}
+.hero-wrapper {
   width: 95%;
-  border: 1px solid red;
   margin: 0 auto;
   padding: 48px 0;
   position: relative;
@@ -112,75 +114,56 @@
 }
 
 /* ABOUT US */
-.About {
-  border: 1px solid black;
+.about-wrapper {
   width: 95%;
-  margin: 0 auto;
-}
-
-.About-wrapper {
+  margin: 45px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 30px;
-  align-items: stretch;
 }
 
-.About-text {
-  padding: 0px 30px 20px 30px;
+.about-text {
   text-align: left;
 }
 
-.About-text h1 {
+.about-text h1 {
   margin-bottom: 20px;
-  margin-top: 30px;
   font-weight: bold;
   font-size: 30px;
 }
-/* tady trochu zmatkuju - musim si znova projit lekci 6 */
-.About-image {
+
+.about-image {
   background-image: url(about-us-pics/anneliese-phillips-uv4-vl3liKM-unsplash.jpg);
   background-position: center;
-  /* flex-basis: 300px; */
-  flex-shrink: 0;
   border-radius: 5px;
-  /* height: 450px; */
+  min-height: 300px;
   background-size: cover;
-  margin: 30px 0px 30px 30px;
-  /* background-repeat: no-repeat; */
 }
 
 @media (min-width: 768px) {
-  .About {
-    width: 70%;
-  }
-
-  .About-wrapper {
+  .about-wrapper {
     flex-direction: row;
-    /* margin: 0 auto; */
+    width: 70%;
+    margin: 45px auto;
   }
 
-  .About-text {
-    /* width: 50%; */
-    flex: 1;
+  .about-text {
+    width: 50%;
   }
 
-  .About-image {
-    /* width: 50%; */
-    /* height: auto; */
-    flex: 1;
+  .about-image {
+    width: 50%;
   }
 }
 
 /* WHAT WE DO */
 .what-we-do {
   background-color: var(--background-color-wwd);
-  width: 95%;
-  margin: 0 auto;
 }
 
 .what-we-do-wrapper {
-  border: 1px solid red;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .what-we-do-text {
@@ -214,15 +197,20 @@
 }
 
 @media (min-width: 768px) {
+  .what-we-do {
+    background-color: var(--background-color-wwd);
+  }
+  .what-we-do-wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
   .text h4 {
     color: var(--color-white);
   }
   .what-we-do-gallery {
     display: flex;
   }
-  .what-we-do {
-    width: 70%;
-  }
+
   .image {
     background-color: var(--background-color-wwd);
   }
@@ -233,7 +221,6 @@
   width: 95%;
   margin: 0 auto;
   padding: 30px;
-  border: 1px solid red;
 }
 
 .gallery-image {
@@ -258,7 +245,6 @@
 
 @media (min-width: 768px) {
   .gallery-wrapper {
-    border: 2px solid red;
     width: 70%;
     display: flex;
     flex-wrap: wrap;
@@ -275,9 +261,11 @@
 }
 
 /* CONTACT */
-.contact-wrapper {
+.contact {
   background-color: var(--background-color-contact);
-  border: 1px solid black;
+}
+
+.contact-wrapper {
   width: 95%;
   margin: 0 auto;
   padding: 30px;
@@ -338,23 +326,22 @@
 }
 
 /* REVIEWS */
-.Review-wrapper {
-  border: 1px solid red;
+.review-wrapper {
   width: 95%;
   margin: 0 auto;
   padding: 40px;
 }
-.Review-text h2 {
+.review-text h2 {
   text-align: center;
   margin-bottom: 35px;
 }
 
-.Review-text p {
+.review-text p {
   text-align: center;
   margin-bottom: 45px;
 }
 
-.Review-card img {
+.review-card img {
   display: block;
   margin: 0 auto;
   width: 180px;
@@ -387,23 +374,21 @@
 }
 
 @media (min-width: 768px) {
-  .Review-wrapper {
+  .review-wrapper {
     width: 70%;
   }
-  .Review-card {
+  .review-card {
     display: flex;
     gap: 30px;
   }
 }
 
 /* BEST PLACES */
-.Best-places-gallery {
-  border: 1px solid red;
-  width: 95%;
+.best-places-gallery {
   margin: 0 auto;
 }
 
-.Best-places-wrapper {
+.best-places-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
@@ -421,12 +406,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .Best-places-gallery {
-    border: 1px solid red;
-    width: 70%;
-    margin: 0 auto;
-  }
-
   .the-gallery-image {
     display: flex;
     flex: 1 1 50%;
@@ -434,12 +413,12 @@ img {
 }
 
 /* FOOTER */
-.footer-wrapper {
+.footer {
   background-color: var(--background-color-footer);
-  border: 1px solid red;
+}
+.footer-wrapper {
   width: 95%;
   margin: 0 auto;
-  /* padding: 10px 0; */
   height: 80px;
 }
 
